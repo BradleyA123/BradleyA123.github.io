@@ -1,0 +1,119 @@
+/*Page Template*/
+
+#main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "content1 content1 content1"
+    "facts1 facts2 facts3"
+    "footer footer footer";
+  background-color: grey;
+  width:100%;
+}
+
+/*Title Setup*/
+#title{
+  text-align: center;
+  grid-area: header;
+  background-color: lightgrey;
+}
+
+#title h1{
+  text-decoration: underline;
+}
+
+#title p{
+  font-size: 30px;
+}
+
+/*Image setup*/
+#img-div{
+  text-align: center;
+  grid-area: content1;
+  min-height: auto;
+  max-width:100%;
+}
+
+#image{
+  border-color: white;
+  border-width: 10%;
+  border-style: double;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#img-caption:hover{
+  color: white;
+}
+
+/*Main body content*/
+#tribute-info{
+  grid-area:facts1;
+  min-height: auto;
+  width: 100;
+  text-align: center;
+  background-color: lightgrey;
+  padding:0;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+#tribute-info2{
+  grid-area:facts2;
+  min-height: auto;
+  width:100%;
+  text-align: center;
+  background-color: lightgrey;
+  padding:0;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#tribute-info3{
+  grid-area:facts3;
+  width:100%;
+  text-align: center;
+  background-color: lightgrey;
+  font-size:18px;
+  line-height: 20px;
+}
+
+/*Footer setup*/
+#footer{
+  grid-area:footer;
+  width: 100%;
+}
+
+/*External link setup*/
+#tribute-link{
+  text-decoration:underline;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#tribute-link:hover{
+  color: white;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 600px){
+  #main{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "header"
+      "content1"
+      "facts1"
+      "facts2"
+      "facts3"
+      "footer";
+  }
+}
